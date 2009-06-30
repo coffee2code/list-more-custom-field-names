@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: List More Custom Field Names
-Version: 1.0
+Version: 1.1
 Plugin URI: http://coffee2code.com/wp-plugins/list-more-custom-field-names
 Author: Scott Reilly
 Author URI: http://coffee2code.com
@@ -14,10 +14,12 @@ listed, which increases the chances for naming errors (typos, or not using the p
 cause some authors concern wondering where previously used custom field keys have gone since they aren't listed.
 
 This plugin increases the limit to 200 custom field key names.  Due to the simplistic nature of the plugin and the overhead of doing so
-for a single setting, there is no settings page to customize this value.  You can edit the plugin file and change the 
-$custom_field_names_limit variable value to whatever value you'd like.
+for a single setting, there is no settings page to customize this value.  You can change the value of the limit by editing your
+wp-config.php file and at the end adding a line such as:
+	define('CUSTOM_FIELD_NAMES_LIMIT', 100);
+Where the value of 100 is the value you'd like to specify.
 
-Compatible with WordPress 2.6+, 2.7+.
+Compatible with WordPress 2.6+, 2.7+, 2.8+.
 
 =>> Read the accompanying readme.txt file for more information.  Also, visit the plugin's homepage
 =>> for more information and the latest updates
@@ -27,6 +29,9 @@ Installation:
 1. Download the file http://coffee2code.com/wp-plugins/list-more-custom-field-names.zip and unzip it into your 
 /wp-content/plugins/ directory.
 2. Activate the plugin through the 'Plugins' admin menu in WordPress
+3. (Optional) In wp-config.php, customize the number of custom fields you want shown. The default of 200 can be changed by adding a line like:
+define('CUSTOM_FIELD_NAMES_LIMIT', 100);
+
 */
 
 /*
@@ -45,10 +50,7 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRA
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-// Change the value of this parameter to specify the most custom fields you'd like to have listed.
-$custom_field_names_limit = 200;
-
 add_filter('postmeta_form_limit', create_function( '$limit',
-				'return isset($GLOBALS["custom_field_names_limit"]) ? $GLOBALS["custom_field_names_limit"] : $limit;'));
+				'return defined(\'CUSTOM_FIELD_NAMES_LIMIT\') ? CUSTOM_FIELD_NAMES_LIMIT : 200;'));
 
 ?>
