@@ -1,7 +1,12 @@
 <?php
+/**
+ * @package List_More_Custom_Field_Names
+ * @author Scott Reilly
+ * @version 1.1.1
+ */
 /*
 Plugin Name: List More Custom Field Names
-Version: 1.1
+Version: 1.1.1
 Plugin URI: http://coffee2code.com/wp-plugins/list-more-custom-field-names
 Author: Scott Reilly
 Author URI: http://coffee2code.com
@@ -19,7 +24,7 @@ wp-config.php file and at the end adding a line such as:
 	define('CUSTOM_FIELD_NAMES_LIMIT', 100);
 Where the value of 100 is the value you'd like to specify.
 
-Compatible with WordPress 2.6+, 2.7+, 2.8+.
+Compatible with WordPress 2.6+, 2.7+, 2.8+, 2.9+.
 
 =>> Read the accompanying readme.txt file for more information.  Also, visit the plugin's homepage
 =>> for more information and the latest updates
@@ -27,7 +32,7 @@ Compatible with WordPress 2.6+, 2.7+, 2.8+.
 Installation:
 
 1. Download the file http://coffee2code.com/wp-plugins/list-more-custom-field-names.zip and unzip it into your 
-/wp-content/plugins/ directory.
+/wp-content/plugins/ directory (or install via the built-in WordPress plugin installer).
 2. Activate the plugin through the 'Plugins' admin menu in WordPress
 3. (Optional) In wp-config.php, customize the number of custom fields you want shown. The default of 200 can be changed by adding a line like:
 define('CUSTOM_FIELD_NAMES_LIMIT', 100);
@@ -35,7 +40,7 @@ define('CUSTOM_FIELD_NAMES_LIMIT', 100);
 */
 
 /*
-Copyright (c) 2009 by Scott Reilly (aka coffee2code)
+Copyright (c) 2009-2010 by Scott Reilly (aka coffee2code)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation 
 files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, 

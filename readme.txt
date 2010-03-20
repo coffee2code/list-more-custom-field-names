@@ -3,9 +3,9 @@ Contributors: coffee2code
 Donate link: http://coffee2code.com/donate
 Tags: custom fields, admin, edit post, edit page, meta, keys, coffee2code
 Requires at least: 2.6
-Tested up to: 2.8.1
-Stable tag: 1.1
-Version: 1.1
+Tested up to: 2.9.1
+Stable tag: 1.1.1
+Version: 1.1.1
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -22,7 +22,7 @@ Where the value of 100 is the value you'd like to specify.
 
 == Installation ==
 
-1. Unzip `list-more-custom-field-names.zip` inside the `/wp-content/plugins/` directory for your site
+1. Unzip `list-more-custom-field-names.zip` inside the `/wp-content/plugins/` directory for your site (or install via the built-in WordPress plugin installer)
 1. Activate the plugin through the 'Plugins' admin menu in WordPress
 1. (Optional) In wp-config.php, customize the number of custom fields you want shown. The default of 200 can be changed by adding a line like:
 `define('CUSTOM_FIELD_NAMES_LIMIT', 100);`
@@ -45,6 +45,11 @@ In your wp-config.php file (in the root directory of your blog), add the followi
 
 
 == Changelog ==
+
+= 1.1.1 =
+* Add PHPDoc documentation
+* Note compatibility with WP 2.9+
+* Update copyright date
 
 = 1.1 =
 * Default limit provided by plugin now overridden via CUSTOM_FIELD_NAMES_LIMIT constant, if defined (and no longer via global variable defined in plugin)
