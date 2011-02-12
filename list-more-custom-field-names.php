@@ -2,17 +2,17 @@
 /**
  * @package List_More_Custom_Field_Names
  * @author Scott Reilly
- * @version 1.2
+ * @version 1.2.1
  */
 /*
 Plugin Name: List More Custom Field Names
-Version: 1.2
+Version: 1.2.1
 Plugin URI: http://coffee2code.com/wp-plugins/list-more-custom-field-names/
 Author: Scott Reilly
 Author URI: http://coffee2code.com
 Description: Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
-Compatible with WordPress 2.6+, 2.7+, 2.8+, 2.9+, 3.0+.
+Compatible with WordPress 2.6+, 2.7+, 2.8+, 2.9+, 3.0+, 3.1+.
 
 =>> Read the accompanying readme.txt file for instructions and documentation.
 =>> Also, visit the plugin's homepage for additional information and updates.
@@ -21,7 +21,7 @@ Compatible with WordPress 2.6+, 2.7+, 2.8+, 2.9+, 3.0+.
 */
 
 /*
-Copyright (c) 2009-2010 by Scott Reilly (aka coffee2code)
+Copyright (c) 2009-2011 by Scott Reilly (aka coffee2code)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
 files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
