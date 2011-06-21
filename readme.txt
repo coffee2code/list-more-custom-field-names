@@ -3,9 +3,9 @@ Contributors: coffee2code
 Donate link: http://coffee2code.com/donate
 Tags: custom fields, admin, edit post, edit page, meta, keys, coffee2code
 Requires at least: 2.6
-Tested up to: 3.1
-Stable tag: 1.2.1
-Version: 1.2.1
+Tested up to: 3.2
+Stable tag: 1.2.2
+Version: 1.2.2
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -16,15 +16,15 @@ Allows for more existing custom field names to be listed in the dropdown selecti
 
 By default, WordPress only allows 30 custom field names/keys to be listed in the dropdown selection 'Name' field when writing a post or page.  If you, or the plugins you use, make use of a lot of custom field key names, you may surpass the default limit resulting in some custom field keys not being listed.  This may force post authors to manually type in custom field key names if they aren't listed, which increases the chances for naming errors (typos, or not using the precise key name that is needed).  This may also cause some authors concern wondering where previously used custom field keys have gone since they aren't listed.
 
-This plugin increases the limit to 200 custom field key names.  Due to the simplistic nature of the plugin and the overhead of doing so for a single setting, there is no settings page to customize this value.  You can change the value of the limit in either of two ways:
+This plugin increases the limit to 200 custom field key names.  Due to the simplistic nature of the plugin and the overhead of doing so for a single setting, there is no settings page to customize this value.  Assuming you want to change the value of the limit to 100, you can do so in either of two ways:
 
 1. By editing your wp-config.php file and at the end adding a line such as:
     `define('CUSTOM_FIELD_NAMES_LIMIT', 100);`
-Where the value of 100 is the value you'd like to specify.
 _-or-_
 1. Somewhere, most likely in your active theme's functions.php file, hook the 'c2c_list_more_custom_field_names' filter and return the number you'd like:
     `add_filter('c2c_list_more_custom_field_names', create_function('$limit', 'return 100;'));`
-Where the value of 100 is the value you'd like to specify.
+
+Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/list-more-custom-field-names/) | [Author Homepage](http://coffee2code.com)
 
 
 == Installation ==
@@ -48,13 +48,22 @@ By default, this plugin lists up to 200.  You can customize this value.
 = How can I customize the default number of custom field name/keys listed in the admin when writing/editing pages and posts? =
 
 There are two ways you can customize this value (in both examples, change 100 to the number you'd like to use):
+
 1. In your wp-config.php file (in the root directory of your blog), add the following line of code (making sure it is within the opening `<?php` and closing `?>` PHP tags):
+
     `define('CUSTOM_FIELD_NAMES_LIMIT', 100);`
-2. Somewhere, most likely in your active theme's functions.php file, hook the 'c2c_list_more_custom_field_names' filter and return the number you'd like:
+
+2. (recommented) Somewhere, most likely in your active theme's functions.php file, hook the 'c2c_list_more_custom_field_names' filter and return the number you'd like:
+
     `add_filter('c2c_list_more_custom_field_names', create_function('$limit', 'return 100;'));`
 
 
 == Changelog ==
+
+= 1.2.2 =
+* Note compatibility through WP 3.2+
+* Minor documentation reformatting in readme.txt
+* Add plugin homepage and author links to description in readme.txt
 
 = 1.2.1 =
 * Note compatibility through WP 3.1+
@@ -82,6 +91,9 @@ There are two ways you can customize this value (in both examples, change 100 to
 
 
 == Upgrade Notice ==
+
+= 1.2.2 =
+Trivial update: noted compatibility through WP 3.2+
 
 = 1.2.1 =
 Trivial update: noted compatibility through WP 3.1+ and updated copyright date
