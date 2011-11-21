@@ -18,6 +18,11 @@ Compatible with WordPress 2.6+, 2.7+, 2.8+, 2.9+, 3.0+, 3.1+, 3.2+.
 =>> Also, visit the plugin's homepage for additional information and updates.
 =>> Or visit: http://wordpress.org/extend/plugins/list-more-custom-field-names/
 
+TODO:
+	* While there is some arguable merit about this plugin providing its own filter which is effectively a
+	passthrough to WP's own filter, the docs should advocate using the WP filter instead of this plugin's
+	filter.
+
 */
 
 /*
@@ -36,7 +41,7 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRA
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-if ( !function_exists( 'c2c_list_more_custom_field_names' ) ):
+if ( ! function_exists( 'c2c_list_more_custom_field_names' ) ):
 /**
  * Allows customization of the number of custom field names to list in the
  * dropdown of custom field names when adding custom fields to a post.
