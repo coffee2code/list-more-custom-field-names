@@ -5,9 +5,9 @@ Tags: custom fields, admin, edit post, edit page, meta, keys, coffee2code
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
-Tested up to: 3.4
-Stable tag: 1.2.4
-Version: 1.2.4
+Tested up to: 3.5
+Stable tag: 1.2.5
+Version: 1.2.5
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -62,6 +62,13 @@ There are two ways you can customize this value (in both examples, change 100 to
 
 == Changelog ==
 
+= 1.2.5 =
+* Cast limit as absolute integer rather than just an integer to disallow negative limits
+* Add check to prevent execution of code if file is directly accessed
+* Note compatibility through WP 3.5+
+* Update copyright date (2013)
+* Minor code reformatting (spacing)
+
 = 1.2.4 =
 * Re-license as GPLv2 or later (from X11)
 * Add 'License' and 'License URI' header tags to readme.txt and plugin file
@@ -104,6 +111,9 @@ There are two ways you can customize this value (in both examples, change 100 to
 
 
 == Upgrade Notice ==
+
+= 1.2.5 =
+Trivial update: noted compatibility through WP 3.5+
 
 = 1.2.4 =
 Trivial update: noted compatibility through WP 3.4+; explicitly stated license
