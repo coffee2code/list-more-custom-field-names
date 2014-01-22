@@ -63,11 +63,12 @@ Yes.
 
 == Changelog ==
 
-= 1.2.6 =
+= 1.2.6 (2013-12-17) =
 * Add unit tests
 * Note compatibility through WP 3.8+
 * Update copyright date (2014)
 * Minor code and documentation reformatting
+* Change donate link
 * Add banner image
 
 = 1.2.5 =
