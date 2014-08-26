@@ -5,8 +5,8 @@ Tags: custom fields, admin, edit post, edit page, meta, keys, coffee2code
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
-Tested up to: 3.8
-Stable tag: 1.2.6
+Tested up to: 4.0
+Stable tag: 1.2.7
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -23,7 +23,7 @@ _-or-_
 1. Somewhere, most likely in your active theme's functions.php file, hook the 'c2c_list_more_custom_field_names' filter and return the number you'd like:
     `add_filter( 'c2c_list_more_custom_field_names', create_function( '$limit', 'return 100;' ) );`
 
-Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/list-more-custom-field-names/) | [Plugin Directory Page](http://wordpress.org/plugins/list-more-custom-field-names/) | [Author Homepage](http://coffee2code.com)
+Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/list-more-custom-field-names/) | [Plugin Directory Page](https://wordpress.org/plugins/list-more-custom-field-names/) | [Author Homepage](http://coffee2code.com)
 
 
 == Installation ==
@@ -62,6 +62,12 @@ Yes.
 
 
 == Changelog ==
+
+= 1.2.7 (2014-08-25) =
+* Minor plugin header reformatting
+* Change documentation links to wp.org to be https
+* Note compatibility through WP 4.0+
+* Add plugin icon
 
 = 1.2.6 (2013-12-17) =
 * Add unit tests
@@ -120,6 +126,9 @@ Yes.
 
 
 == Upgrade Notice ==
+
+= 1.2.7 =
+Trivial update: noted compatibility through WP 4.0+; added plugin icon.
 
 = 1.2.6 =
 Trivial update: added unit tests; noted compatibility through WP 3.8+
