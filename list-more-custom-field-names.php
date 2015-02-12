@@ -6,10 +6,10 @@
  * Author URI:  http://coffee2code.com/
  * License:     GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * Version:     1.2.7
+ * Version:     1.2.8
  * Description: Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
  *
- * Compatible with WordPress 2.6 through 4.0+.
+ * Compatible with WordPress 2.6 through 4.1+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
@@ -22,11 +22,11 @@
  *
  * @package List_More_Custom_Field_Names
  * @author Scott Reilly
- * @version 1.2.7
+ * @version 1.2.8
  */
 
 /*
-	Copyright (c) 2009-2014 by Scott Reilly (aka coffee2code)
+	Copyright (c) 2009-2015 by Scott Reilly (aka coffee2code)
 
 	This program is free software; you can redistribute it and/or
 	modify it under the terms of the GNU General Public License
