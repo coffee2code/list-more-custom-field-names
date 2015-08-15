@@ -5,8 +5,8 @@ Tags: custom fields, admin, edit post, edit page, meta, keys, coffee2code
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
-Tested up to: 4.1
-Stable tag: 1.2.8
+Tested up to: 4.3
+Stable tag: 1.2.9
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -62,6 +62,10 @@ Yes.
 
 
 == Changelog ==
+
+= 1.2.9 (2015-08-15) =
+* Update: Note compatibility through WP 4.3+
+* Update: Minor plugin header tweaks (formatting)
 
 = 1.2.8 (2015-02-11) =
 * Note compatibility through WP 4.1+
@@ -130,6 +134,9 @@ Yes.
 
 
 == Upgrade Notice ==
+
+= 1.2.9 =
+Trivial update: noted compatibility through WP 4.3+
 
 = 1.2.8 =
 Trivial update: noted compatibility through WP 4.1+ and updated copyright date
