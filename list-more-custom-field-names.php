@@ -6,10 +6,10 @@
  * Author URI:  http://coffee2code.com/
  * License:     GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * Version:     1.2.9
+ * Version:     1.3
  * Description: Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
  *
- * Compatible with WordPress 2.6 through 4.3+.
+ * Compatible with WordPress 2.6 through 4.4+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
@@ -17,7 +17,7 @@
  *
  * @package List_More_Custom_Field_Names
  * @author  Scott Reilly
- * @version 1.2.9
+ * @version 1.3
  */
 
 /*
@@ -29,7 +29,7 @@
  */
 
 /*
-	Copyright (c) 2009-2015 by Scott Reilly (aka coffee2code)
+	Copyright (c) 2009-2016 by Scott Reilly (aka coffee2code)
 
 	This program is free software; you can redistribute it and/or
 	modify it under the terms of the GNU General Public License
@@ -54,11 +54,11 @@ if ( ! function_exists( 'c2c_list_more_custom_field_names' ) ):
 	 * Allows customization of the number of custom field names to list in the
 	 * dropdown of custom field names when adding custom fields to a post.
 	 *
-	 * @param int $limit The default number of custom field names to list.
-	 * @return int The new number of custom field names to list
+	 * @param int  $limit The default number of custom field names to list.
+	 * @return int The new number of custom field names to list.
 	 */
 	function c2c_list_more_custom_field_names( $limit ) {
-		if ( defined( 'CUSTOM_FIELD_NAMES_LIMIT' ) ) {
+		if ( defined( 'CUSTOM_FIELD_NAMES_LIMIT' ) && CUSTOM_FIELD_NAMES_LIMIT ) {
 			$limit = CUSTOM_FIELD_NAMES_LIMIT;
 		} else {
 			$limit = apply_filters( 'c2c_list_more_custom_field_names', 200 );

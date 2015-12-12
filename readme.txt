@@ -5,8 +5,8 @@ Tags: custom fields, admin, edit post, edit page, meta, keys, coffee2code
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
-Tested up to: 4.3
-Stable tag: 1.2.9
+Tested up to: 4.4
+Stable tag: 1.3
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -62,6 +62,13 @@ Yes.
 
 
 == Changelog ==
+
+= 1.3 (2015-12-11) =
+* Change: Only utilize value of constant if it isn't falsey (0, false, empty string, etc).
+* Change: Note compatibility through WP 4.4+.
+* Change: Explicitly declare methods in unit tests as public or protected.
+* Change: Update copyright date (2016).
+* Add: Create empty index.php to prevent files from being listed if web server has enabled directory listings.
 
 = 1.2.9 (2015-08-15) =
 * Update: Note compatibility through WP 4.3+
@@ -134,6 +141,9 @@ Yes.
 
 
 == Upgrade Notice ==
+
+= 1.3 =
+Minor update: only use non-false values for the constant; noted compatibility through WP 4.4+; updated copyright date
 
 = 1.2.9 =
 Trivial update: noted compatibility through WP 4.3+
