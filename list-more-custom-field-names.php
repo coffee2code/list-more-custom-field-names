@@ -4,6 +4,7 @@
  * Plugin URI:  http://coffee2code.com/wp-plugins/list-more-custom-field-names/
  * Author:      Scott Reilly
  * Author URI:  http://coffee2code.com/
+ * Text Domain: list-more-custom-field-names
  * License:     GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Version:     1.3
