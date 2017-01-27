@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: List More Custom Field Names
+ * Version:     1.3.1
  * Plugin URI:  http://coffee2code.com/wp-plugins/list-more-custom-field-names/
  * Author:      Scott Reilly
  * Author URI:  http://coffee2code.com/
  * Text Domain: list-more-custom-field-names
  * License:     GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * Version:     1.3
  * Description: Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
  *
  * Compatible with WordPress 2.6 through 4.7+.
@@ -18,15 +18,12 @@
  *
  * @package List_More_Custom_Field_Names
  * @author  Scott Reilly
- * @version 1.3
+ * @version 1.3.1
  */
 
 /*
  * TODO:
- * - While there is some arguable merit about this plugin providing its own filter which is effectively a
- *   passthrough to WP's own filter, the docs should advocate using the WP filter instead of this plugin's
- *   filter.
- *
+ * - Change filter example to use anonymous function instead of create_function()
  */
 
 /*

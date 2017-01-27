@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
 Tested up to: 4.7
-Stable tag: 1.3
+Stable tag: 1.3.1
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -66,7 +66,7 @@ Yes.
 
 == Changelog ==
 
-= () =
+= 1.3.1 (2017-01-26) =
 * Change: Default `WP_TESTS_DIR` to `/tmp/wordpress-tests-lib` rather than erroring out if not defined via environment variable.
 * Change: Enable more error output for unit tests.
 * Change: Note compatibility through WP 4.7+.
@@ -153,6 +153,9 @@ Yes.
 
 
 == Upgrade Notice ==
+
+= 1.3.1 =
+Trivial update: tweaked readme, changed unit test bootstrap, noted compatibility through WP 4.7+, and updated copyright date
 
 = 1.3 =
 Minor update: only use non-false values for the constant; noted compatibility through WP 4.4+; updated copyright date
