@@ -68,6 +68,7 @@ Yes.
 * Change: Enable more error output for unit tests.
 * Change: Note compatibility through WP 4.7+.
 * Change: Update copyright date (2017).
+* New: Add LICENSE file.
 
 = 1.3 (2015-12-11) =
 * Change: Only utilize value of constant if it isn't falsey (0, false, empty string, etc).
