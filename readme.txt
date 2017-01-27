@@ -63,6 +63,9 @@ Yes.
 
 == Changelog ==
 
+= () =
+* Change: Default `WP_TESTS_DIR` to `/tmp/wordpress-tests-lib` rather than erroring out if not defined via environment variable.
+
 = 1.3 (2015-12-11) =
 * Change: Only utilize value of constant if it isn't falsey (0, false, empty string, etc).
 * Change: Note compatibility through WP 4.4+.
