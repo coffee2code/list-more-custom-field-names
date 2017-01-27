@@ -9,7 +9,7 @@
  * Version:     1.3
  * Description: Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
  *
- * Compatible with WordPress 2.6 through 4.4+.
+ * Compatible with WordPress 2.6 through 4.7+.
  *
  * =>> Read the accompanying readme.txt file for instructions and documentation.
  * =>> Also, visit the plugin's homepage for additional information and updates.
