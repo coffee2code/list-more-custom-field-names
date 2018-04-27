@@ -67,6 +67,7 @@ Yes.
 == Changelog ==
 
 = () =
+* New: Add README.md
 * Change: Unit tests: Minor whitespace tweaks to bootstrap
 * Change: Add GitHub link to readme
 * Change: Note compatibility through WP 4.9+
