@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
 Tested up to: 4.9
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -66,7 +66,7 @@ Yes.
 
 == Changelog ==
 
-= () =
+= 1.3.2 (2018-04-26) =
 * New: Add README.md
 * Change: Unit tests: Minor whitespace tweaks to bootstrap
 * Change: Add GitHub link to readme
@@ -160,6 +160,9 @@ Yes.
 
 
 == Upgrade Notice ==
+
+= 1.3.2 =
+Trivial update: added README.md, noted compatibility through WP 4.9+. and updated copyright date (2018)
 
 = 1.3.1 =
 Trivial update: tweaked readme, changed unit test bootstrap, noted compatibility through WP 4.7+, and updated copyright date
