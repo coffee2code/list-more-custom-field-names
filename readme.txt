@@ -25,7 +25,7 @@ _-or-_
 1. Somewhere -- ideally in a mu-plugin or site-specific plugin, or less ideally your active theme's functions.php file -- hook the 'c2c_list_more_custom_field_names' filter and return the number you'd like to use:
     `add_filter( 'c2c_list_more_custom_field_names', create_function( '$limit', 'return 100;' ) );`
 
-Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/list-more-custom-field-names/) | [Plugin Directory Page](https://wordpress.org/plugins/list-more-custom-field-names/) | [Author Homepage](http://coffee2code.com)
+Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/list-more-custom-field-names/) | [Plugin Directory Page](https://wordpress.org/plugins/list-more-custom-field-names/) | [GitHub](https://github.com/coffee2code/list-more-custom-field-names/) | [Author Homepage](http://coffee2code.com)
 
 
 == Installation ==
@@ -68,6 +68,7 @@ Yes.
 
 = () =
 * Change: Unit tests: Minor whitespace tweaks to bootstrap
+* Change: Add GitHub link to readme
 * Change: Note compatibility through WP 4.9+
 * Change: Update copyright date (2018)
 
