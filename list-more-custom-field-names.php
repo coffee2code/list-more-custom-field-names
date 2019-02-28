@@ -59,6 +59,14 @@ if ( ! function_exists( 'c2c_list_more_custom_field_names' ) ):
 		if ( defined( 'CUSTOM_FIELD_NAMES_LIMIT' ) && CUSTOM_FIELD_NAMES_LIMIT ) {
 			$limit = CUSTOM_FIELD_NAMES_LIMIT;
 		} else {
+			/**
+			 * Filters the number of custom field names to list in the dropdown of
+			 * custom field names when adding custom fields to a post.
+			 *
+			 * @since 1.2.0
+			 *
+			 * @param int $number The number of custom fields.
+			 */
 			$limit = apply_filters( 'c2c_list_more_custom_field_names', 200 );
 		}
 
