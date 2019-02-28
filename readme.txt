@@ -56,7 +56,7 @@ There are two ways you can customize this value (in both examples, change 100 to
 
 2. Somewhere -- ideally in a mu-plugin or site-specific plugin, or less ideally your active theme's functions.php file -- hook the 'c2c_list_more_custom_field_names' filter and return the number you'd like:
 
-    `add_filter( 'c2c_list_more_custom_field_names', create_function( '$limit', 'return 100;' ) );`
+    `add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return 100; } );`
 
 
 = Does this plugin include unit tests? =
@@ -68,6 +68,7 @@ Yes.
 
 = () =
 * New: Add inline documentation for hook
+* Change: Update filter example to use anonymous function instead of `create_function()`
 * Change: Note compatibility through WP 5.1+
 * Change: Update copyright date (2019)
 * Change: Update License URI to be HTTPS

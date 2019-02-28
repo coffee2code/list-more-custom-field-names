@@ -22,11 +22,6 @@
  */
 
 /*
- * TODO:
- * - Change filter example to use anonymous function instead of create_function()
- */
-
-/*
 	Copyright (c) 2009-2019 by Scott Reilly (aka coffee2code)
 
 	This program is free software; you can redistribute it and/or
