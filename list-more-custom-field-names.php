@@ -7,7 +7,7 @@
  * Author URI:  http://coffee2code.com/
  * Text Domain: list-more-custom-field-names
  * License:     GPLv2 or later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Description: Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
  *
  * Compatible with WordPress 2.6 through 4.9+.

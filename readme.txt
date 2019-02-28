@@ -3,7 +3,7 @@ Contributors: coffee2code
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6ARCFJ9TX3522
 Tags: custom fields, admin, edit post, edit page, meta, keys, coffee2code
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
 Tested up to: 4.9
 Stable tag: 1.3.2
@@ -65,6 +65,9 @@ Yes.
 
 
 == Changelog ==
+
+= () =
+* Change: Update License URI to be HTTPS
 
 = 1.3.2 (2018-04-26) =
 * New: Add README.md
