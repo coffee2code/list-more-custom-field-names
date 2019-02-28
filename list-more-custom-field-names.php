@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: List More Custom Field Names
- * Version:     1.3.2
+ * Version:     1.3.3
  * Plugin URI:  http://coffee2code.com/wp-plugins/list-more-custom-field-names/
  * Author:      Scott Reilly
  * Author URI:  http://coffee2code.com/
@@ -18,7 +18,7 @@
  *
  * @package List_More_Custom_Field_Names
  * @author  Scott Reilly
- * @version 1.3.2
+ * @version 1.3.3
  */
 
 /*

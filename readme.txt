@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
 Tested up to: 5.1
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -72,7 +72,7 @@ Yes.
 
 == Changelog ==
 
-= () =
+= 1.3.3 (2019-02-27) =
 * NeW: Add documentation indicating that the plugin has no benefit for users using the block editor
 * New: Add inline documentation for hook
 * Change: Update filter example to use anonymous function instead of `create_function()`
@@ -174,6 +174,9 @@ Yes.
 
 
 == Upgrade Notice ==
+
+= 1.3.3 =
+Trivial update: noted lack of benefit for users using block editor, noted compatibility through WP 5.1+. and updated copyright date (2019)
 
 = 1.3.2 =
 Trivial update: added README.md, noted compatibility through WP 4.9+. and updated copyright date (2018)
