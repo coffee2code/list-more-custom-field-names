@@ -25,6 +25,8 @@ _-or-_
 1. Somewhere -- ideally in a mu-plugin or site-specific plugin, or less ideally your active theme's functions.php file -- hook the 'c2c_list_more_custom_field_names' filter and return the number you'd like to use:
     `add_filter( 'c2c_list_more_custom_field_names', create_function( '$limit', 'return 100;' ) );`
 
+Note: This plugin has no effect for users who make use of the block editor (aka Gutenberg) introduced in WordPress v5.0 because that editor does not directly expose custom fields in the interface.
+
 Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/list-more-custom-field-names/) | [Plugin Directory Page](https://wordpress.org/plugins/list-more-custom-field-names/) | [GitHub](https://github.com/coffee2code/list-more-custom-field-names/) | [Author Homepage](http://coffee2code.com)
 
 
@@ -59,6 +61,10 @@ There are two ways you can customize this value (in both examples, change 100 to
     `add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return 100; } );`
 
 
+= Why don't I see form fields for adding/editing custom fields for a post, as mentioned by documentation for this plugin? =
+
+This plugin has no effect for users who make use of the block editor (aka Gutenberg) introduced in WordPress v5.0 because that editor does not directly expose custom fields in the interface. The plugin is still beneficial for users making use of the classic editor.
+
 = Does this plugin include unit tests? =
 
 Yes.
@@ -67,6 +73,7 @@ Yes.
 == Changelog ==
 
 = () =
+* NeW: Add documentation indicating that the plugin has no benefit for users using the block editor
 * New: Add inline documentation for hook
 * Change: Update filter example to use anonymous function instead of `create_function()`
 * Change: Note compatibility through WP 5.1+
