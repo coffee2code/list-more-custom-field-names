@@ -5,7 +5,7 @@ Tags: custom fields, admin, edit post, edit page, meta, keys, coffee2code
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
-Tested up to: 5.1
+Tested up to: 5.3
 Stable tag: 1.3.3
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
