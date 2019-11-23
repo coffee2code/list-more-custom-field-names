@@ -3,6 +3,7 @@
 ## _(in-progress)_
 * New: Add CHANGELOG.md and move all but most recent changelog entries into it
 * Change: Note compatibility through WP 5.3+
+* Change: Update copyright date (2020)
 
 ## 1.3.3 _(2019-02-27)_
 * NeW: Add documentation indicating that the plugin has no benefit for users using the block editor
