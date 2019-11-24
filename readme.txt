@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
 Tested up to: 5.3
-Stable tag: 1.3.3
+Stable tag: 1.3.4
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -72,6 +72,14 @@ Yes.
 
 == Changelog ==
 
+= 1.3.4 (2019-11-23) =
+* New: Add CHANGELOG.md and move all but most recent changelog entries into it
+* Change: Update unit test install script and bootstrap to use latest WP unit test repo
+* Change: Note compatibility through WP 5.3+
+* Change: Add link to plugin's page in Plugin Directory to README.md
+* Change: Update copyright date (2020)
+* Change: Split paragraph in README.md's "Support" section into two
+
 = 1.3.3 (2019-02-27) =
 * NeW: Add documentation indicating that the plugin has no benefit for users using the block editor
 * New: Add inline documentation for hook
@@ -91,6 +99,9 @@ _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/li
 
 
 == Upgrade Notice ==
+
+= 1.3.4 =
+Trivial update: modernized unit tests, created CHANGELOG.md to store historical changelog outside of readme.txt, noted compatibility through WP 5.3+, and updated copyright date (2020)
 
 = 1.3.3 =
 Trivial update: noted lack of benefit for users using block editor, noted compatibility through WP 5.1+. and updated copyright date (2019)

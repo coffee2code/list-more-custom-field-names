@@ -1,6 +1,6 @@
 # Changelog
 
-## _(in-progress)_
+## 1.3.4 _(2019-11-23)_
 * New: Add CHANGELOG.md and move all but most recent changelog entries into it
 * New: Add unit test to verify plugin hooks the proper filter
 * Change: Update unit test install script and bootstrap to use latest WP unit test repo
