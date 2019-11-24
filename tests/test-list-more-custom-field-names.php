@@ -33,6 +33,10 @@ class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 	//
 
 
+	public function test_hooks_postmeta_form_limit() {
+		$this->assertEquals( 10, has_filter( 'postmeta_form_limit', 'c2c_list_more_custom_field_names' ) );
+	}
+
 	public function test_default_filtering() {
 		$this->assertEquals( 200, $this->get_postmeta_form_limit() );
 	}
