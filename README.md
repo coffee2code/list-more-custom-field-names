@@ -2,6 +2,8 @@
 
 A plugin for WordPress that allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
+This plugin is available in the WordPress Plugin Directory: https://wordpress.org/plugins/list-more-custom-field-names/
+
 
 ## Installation
 
