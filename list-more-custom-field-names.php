@@ -2,9 +2,9 @@
 /**
  * Plugin Name: List More Custom Field Names
  * Version:     1.3.4
- * Plugin URI:  http://coffee2code.com/wp-plugins/list-more-custom-field-names/
+ * Plugin URI:  https://coffee2code.com/wp-plugins/list-more-custom-field-names/
  * Author:      Scott Reilly
- * Author URI:  http://coffee2code.com/
+ * Author URI:  https://coffee2code.com/
  * Text Domain: list-more-custom-field-names
  * License:     GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html

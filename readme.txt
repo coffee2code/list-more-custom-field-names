@@ -27,7 +27,7 @@ _-or-_
 
 Note: This plugin has no effect for users who make use of the block editor (aka Gutenberg) introduced in WordPress v5.0 because that editor does not directly expose custom fields in the interface.
 
-Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/list-more-custom-field-names/) | [Plugin Directory Page](https://wordpress.org/plugins/list-more-custom-field-names/) | [GitHub](https://github.com/coffee2code/list-more-custom-field-names/) | [Author Homepage](http://coffee2code.com)
+Links: [Plugin Homepage](https://coffee2code.com/wp-plugins/list-more-custom-field-names/) | [Plugin Directory Page](https://wordpress.org/plugins/list-more-custom-field-names/) | [GitHub](https://github.com/coffee2code/list-more-custom-field-names/) | [Author Homepage](https://coffee2code.com)
 
 
 == Installation ==
