@@ -9,6 +9,8 @@
     * Change: Move `tests/` to `phpunit/tests/`
     * Change: Rename `phpunit.xml` to `phpunit.xml.dist` per best practices
 * Change: Note compatibility through WP 5.5+
+* Unit tests:
+    * Change: Remove unnecessary unregistering of hooks, and thusly delete `tearDown()`
 
 ## 1.3.5 _(2020-05-02)_
 * Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests

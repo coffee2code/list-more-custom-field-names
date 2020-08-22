@@ -4,12 +4,6 @@ defined( 'ABSPATH' ) or die();
 
 class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 
-	public function tearDown() {
-		parent::tearDown();
-		remove_filter( 'c2c_list_more_custom_field_names', array( $this, 'filter_c2c_list_more_custom_field_names' ) );
-	}
-
-
 	//
 	//
 	// HELPER FUNCTIONS
