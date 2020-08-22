@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
 Tested up to: 5.5
-Stable tag: 1.3.5
+Stable tag: 1.3.6
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -72,6 +72,19 @@ Yes.
 
 == Changelog ==
 
+= 1.3.6 (2020-08-21) =
+* New: Add TODO.md for newly added potential TODO item
+* Change: Restructure unit test file structure
+    * New: Create new subdirectory `phpunit/` to house all files related to unit testing
+    * Change: Move `bin/` to `phpunit/bin/`
+    * Change: Move `tests/bootstrap.php` to `phpunit/`
+    * Change: Move `tests/` to `phpunit/tests/`
+    * Change: Rename `phpunit.xml` to `phpunit.xml.dist` per best practices
+* Change: Note compatibility through WP 5.5+
+* Unit tests:
+    * New: Add unit test to verify filter return value is cast as integer
+    * Change: Remove unnecessary unregistering of hooks, and thusly delete `tearDown()`
+
 = 1.3.5 (2020-05-02) =
 * Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests
 * Change: Note compatibility through WP 5.4+
@@ -85,18 +98,13 @@ Yes.
 * Change: Update copyright date (2020)
 * Change: Split paragraph in README.md's "Support" section into two
 
-= 1.3.3 (2019-02-27) =
-* NeW: Add documentation indicating that the plugin has no benefit for users using the block editor
-* New: Add inline documentation for hook
-* Change: Update filter example to use anonymous function instead of `create_function()`
-* Change: Note compatibility through WP 5.1+
-* Change: Update copyright date (2019)
-* Change: Update License URI to be HTTPS
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/list-more-custom-field-names/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.3.6 =
+Trivial update: Restructured unit test file structure, added a TODO.md file, and noted compatibility through WP 5.5+.
 
 = 1.3.5 =
 Trivial update: Updated a few URLs to be HTTPS and noted compatibility through WP 5.4+.

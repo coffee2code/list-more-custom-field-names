@@ -1,6 +1,6 @@
 # Changelog
 
-## _(in-progress)_
+## 1.3.6 _(2020-08-21)_
 * New: Add TODO.md for newly added potential TODO item
 * Change: Restructure unit test file structure
     * New: Create new subdirectory `phpunit/` to house all files related to unit testing
