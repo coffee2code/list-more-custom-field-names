@@ -1,5 +1,13 @@
 # Changelog
 
+## _(in-progress)_
+* Change: Restructure unit test file structure
+    * New: Create new subdirectory `phpunit/` to house all files related to unit testing
+    * Change: Move `bin/` to `phpunit/bin/`
+    * Change: Move `tests/bootstrap.php` to `phpunit/`
+    * Change: Move `tests/` to `phpunit/tests/`
+    * Change: Rename `phpunit.xml` to `phpunit.xml.dist` per best practices
+
 ## 1.3.5 _(2020-05-02)_
 * Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests
 * Change: Note compatibility through WP 5.4+
