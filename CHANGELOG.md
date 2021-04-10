@@ -1,5 +1,8 @@
 # Changelog
 
+## _(in-progress)_
+* Change: Update copyright date (2021)
+
 ## 1.3.6 _(2020-08-21)_
 * New: Add TODO.md for newly added potential TODO item
 * Change: Restructure unit test file structure
