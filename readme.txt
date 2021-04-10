@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
 Tested up to: 5.7
-Stable tag: 1.3.6
+Stable tag: 1.3.7
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -72,6 +72,10 @@ Yes.
 
 == Changelog ==
 
+= 1.3.7 (2021-04-10) =
+* Change: Note compatibility through WP 5.7+
+* Change: Update copyright date (2021)
+
 = 1.3.6 (2020-08-21) =
 * New: Add TODO.md for newly added potential TODO item
 * Change: Restructure unit test file structure
@@ -90,18 +94,13 @@ Yes.
 * Change: Note compatibility through WP 5.4+
 * Change: Update links to coffee2code.com to be HTTPS
 
-= 1.3.4 (2019-11-23) =
-* New: Add CHANGELOG.md and move all but most recent changelog entries into it
-* Change: Update unit test install script and bootstrap to use latest WP unit test repo
-* Change: Note compatibility through WP 5.3+
-* Change: Add link to plugin's page in Plugin Directory to README.md
-* Change: Update copyright date (2020)
-* Change: Split paragraph in README.md's "Support" section into two
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/list-more-custom-field-names/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.3.7 =
+Trivial update: noted compatibility through WP 5.7+ and updated copyright date (2021)
 
 = 1.3.6 =
 Trivial update: Restructured unit test file structure, added a TODO.md file, and noted compatibility through WP 5.5+.
