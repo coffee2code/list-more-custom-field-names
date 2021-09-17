@@ -7,6 +7,7 @@
     * Change: Restructure unit test directories
         * Change: Move `phpunit/` into `tests/`
         * Change: Move `phpunit/bin` into `tests/`
+    * Change: In bootstrap, store path to plugin file constant
 
 ## 1.3.7 _(2021-04-10)_
 * Change: Note compatibility through WP 5.7+
