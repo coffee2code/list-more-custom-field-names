@@ -10,6 +10,7 @@
     * Change: Remove 'test-' prefix from unit test file
     * Change: In bootstrap, store path to plugin file constant
     * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
+    * New: Add test for a negative value returned from filter
 
 ## 1.3.7 _(2021-04-10)_
 * Change: Note compatibility through WP 5.7+

@@ -47,6 +47,12 @@ class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 		$this->assertEquals( 55, $this->get_postmeta_form_limit() );
 	}
 
+	public function test_converts_to_positive_int() {
+		add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return -47; } );
+
+		$this->assertEquals( 47, $this->get_postmeta_form_limit() );
+	}
+
 	// Test this last since the constant can't be unset
 	public function test_constant_takes_precendence() {
 		$limit = 175;
