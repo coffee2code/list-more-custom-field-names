@@ -23,7 +23,7 @@ There is no settings page to customize the default value. If you'd like to list 
     `define( 'CUSTOM_FIELD_NAMES_LIMIT', 100 );`
 _-or-_
 1. Somewhere -- ideally in a mu-plugin or site-specific plugin, or less ideally your active theme's functions.php file -- hook the 'c2c_list_more_custom_field_names' filter and return the number you'd like to use:
-    `add_filter( 'c2c_list_more_custom_field_names', create_function( '$limit', 'return 100;' ) );`
+    `add_filter( 'c2c_list_more_custom_field_names', function ( $limist ) { return 100; } );`
 
 Note: This plugin has no effect for users who make use of the block editor (aka Gutenberg) introduced in WordPress v5.0 because that editor does not directly expose custom fields in the interface.
 
