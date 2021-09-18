@@ -3,6 +3,7 @@
 ## _(in-progress)_
 * Change: Note compatibility through WP 5.8+
 * Change: Update usage instructions to use anonymous function instead of `create_function()` (as was done in filter example in v1.3.3)
+* Change: Tweak indentation for code examples in readme.txt
 * Unit tests:
     * Change: Restructure unit test directories
         * Change: Move `phpunit/` into `tests/`
