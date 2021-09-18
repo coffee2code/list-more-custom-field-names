@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
 Tested up to: 5.8
-Stable tag: 1.3.7
+Stable tag: 1.3.8
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -72,6 +72,19 @@ Yes.
 
 == Changelog ==
 
+= 1.3.8 (2021-09-17) =
+* Change: Note compatibility through WP 5.8+
+* Change: Update usage instructions to use anonymous function instead of `create_function()` (as was done in filter example in v1.3.3)
+* Change: Tweak indentation for code examples in readme.txt
+* Unit tests:
+    * Change: Restructure unit test directories
+        * Change: Move `phpunit/` into `tests/`
+        * Change: Move `phpunit/bin` into `tests/`
+    * Change: Remove 'test-' prefix from unit test file
+    * Change: In bootstrap, store path to plugin file constant
+    * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
+    * New: Add test for a negative value returned from filter
+
 = 1.3.7 (2021-04-10) =
 * Change: Note compatibility through WP 5.7+
 * Change: Update copyright date (2021)
@@ -89,15 +102,13 @@ Yes.
     * New: Add unit test to verify filter return value is cast as integer
     * Change: Remove unnecessary unregistering of hooks, and thusly delete `tearDown()`
 
-= 1.3.5 (2020-05-02) =
-* Change: Use HTTPS for link to WP SVN repository in bin script for configuring unit tests
-* Change: Note compatibility through WP 5.4+
-* Change: Update links to coffee2code.com to be HTTPS
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/list-more-custom-field-names/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.3.8 =
+Trivial update: noted compatibility through WP 5.8+ and minor reorganization and tweaks to unit tests
 
 = 1.3.7 =
 Trivial update: noted compatibility through WP 5.7+ and updated copyright date (2021)
