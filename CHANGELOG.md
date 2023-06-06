@@ -1,5 +1,8 @@
 # Changelog
 
+## _(in-progress)_
+* Change: Update copyright date (2023)
+
 ## 1.3.8 _(2021-09-17)_
 * Change: Note compatibility through WP 5.8+
 * Change: Update usage instructions to use anonymous function instead of `create_function()` (as was done in filter example in v1.3.3)
