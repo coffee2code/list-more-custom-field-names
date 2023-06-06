@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
 Tested up to: 6.3
-Stable tag: 1.3.8
+Stable tag: 1.3.9
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -72,6 +72,15 @@ Yes.
 
 == Changelog ==
 
+= 1.3.9 (2023-06-06) =
+* Change: Note compatibility through WP 6.3+
+* Change: Update copyright date (2023)
+* New: Add `.gitignore` file
+* Unit tests:
+    * Allow tests to run against current versions of WordPress
+    * New: Add `composer.json` for PHPUnit Polyfill dependency
+    * Change: Prevent PHP warnings due to missing core-related generated files
+
 = 1.3.8 (2021-09-17) =
 * Change: Note compatibility through WP 5.8+
 * Change: Update usage instructions to use anonymous function instead of `create_function()` (as was done in filter example in v1.3.3)
@@ -89,23 +98,13 @@ Yes.
 * Change: Note compatibility through WP 5.7+
 * Change: Update copyright date (2021)
 
-= 1.3.6 (2020-08-21) =
-* New: Add TODO.md for newly added potential TODO item
-* Change: Restructure unit test file structure
-    * New: Create new subdirectory `phpunit/` to house all files related to unit testing
-    * Change: Move `bin/` to `phpunit/bin/`
-    * Change: Move `tests/bootstrap.php` to `phpunit/`
-    * Change: Move `tests/` to `phpunit/tests/`
-    * Change: Rename `phpunit.xml` to `phpunit.xml.dist` per best practices
-* Change: Note compatibility through WP 5.5+
-* Unit tests:
-    * New: Add unit test to verify filter return value is cast as integer
-    * Change: Remove unnecessary unregistering of hooks, and thusly delete `tearDown()`
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/list-more-custom-field-names/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.3.9 =
+Trivial update: noted compatibility through WP 6.3+, updated unit tests to run against latest WordPress, and updated copyright date (2023)
 
 = 1.3.8 =
 Trivial update: noted compatibility through WP 5.8+ and minor reorganization and tweaks to unit tests
