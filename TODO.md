@@ -7,6 +7,5 @@ The following list comprises ideas, suggestions, and known issues, all of which 
 * Add a UI for setting the value within the WP admin
 * Detect the number of custom fields that could be listed and dynamically adjust to show them all
 * ...and if excessively large, replace the meta key name field with a smarter input field (akin to select2)
-* Add `$limit` as optional arg to '`c2c_list_more_custom_field_names'` filter
 
 Feel free to make your own suggestions or champion for something already on the list (via the [plugin's support forum on WordPress.org](https://wordpress.org/support/plugin/list-more-custom-field-names/) or on [GitHub](https://github.com/coffee2code/list-more-custom-field-names/) as an issue or PR).

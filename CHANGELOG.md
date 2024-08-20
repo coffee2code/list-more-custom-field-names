@@ -1,6 +1,7 @@
 # Changelog
 
 ## _(in-progress)_
+* New: Add second argument to 'c2c_list_more_custom_field_names' for the preexisting limit
 * Change: Note compatibility through WP 6.6+
 * Change: Update copyright date (2024)
 * Change: Reduce number of 'Tags' from `readme.txt`

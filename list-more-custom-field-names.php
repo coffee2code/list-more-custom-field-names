@@ -59,10 +59,12 @@ if ( ! function_exists( 'c2c_list_more_custom_field_names' ) ):
 			 * custom field names when adding custom fields to a post.
 			 *
 			 * @since 1.2.0
+			 * @since 1.4.0 Added `$limit` argument.
 			 *
 			 * @param int $number The number of custom fields.
+			 * @param int $limit  The default number of custom field names to list, which is likely 30 unless changed by another plugin.
 			 */
-			$limit = apply_filters( 'c2c_list_more_custom_field_names', 200 );
+			$limit = apply_filters( 'c2c_list_more_custom_field_names', 200, $limit );
 		}
 
 		return absint( $limit );
