@@ -6,6 +6,7 @@
 * Change: Reduce number of 'Tags' from `readme.txt`
 * Change: Remove development and testing-related files from release packaging
 * Unit tests:
+    * Hardening: Prevent direct web access to `bootstrap.php`
     * Change: In bootstrap, store path to plugin directory in a constant
 * Change: Tweak formatting in `readme.txt` and `README.md`
 
