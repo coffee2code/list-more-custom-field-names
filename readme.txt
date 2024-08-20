@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
 Tested up to: 6.6
-Stable tag: 1.3.9
+Stable tag: 1.4
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -72,6 +72,17 @@ Yes. The tests are not packaged in the release .zip file or included in plugins.
 
 == Changelog ==
 
+= 1.4 (2024-08-20) =
+* New: Add second argument to 'c2c_list_more_custom_field_names' for the preexisting limit
+* Change: Note compatibility through WP 6.6+
+* Change: Update copyright date (2024)
+* Change: Reduce number of 'Tags' from `readme.txt`
+* Change: Remove development and testing-related files from release packaging
+* Unit tests:
+    * Hardening: Prevent direct web access to `bootstrap.php`
+    * Change: In bootstrap, store path to plugin directory in a constant
+* Change: Tweak formatting in `readme.txt` and `README.md`
+
 = 1.3.9 (2023-06-06) =
 * Change: Note compatibility through WP 6.3+
 * Change: Update copyright date (2023)
@@ -94,14 +105,13 @@ Yes. The tests are not packaged in the release .zip file or included in plugins.
     * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
     * New: Add test for a negative value returned from filter
 
-= 1.3.7 (2021-04-10) =
-* Change: Note compatibility through WP 5.7+
-* Change: Update copyright date (2021)
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/list-more-custom-field-names/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.4 =
+Minor update: added second argument to 'c2c_list_more_custom_field_names' filter, noted compatibility through WP 6.6+, removed unit tests from release packaging, and updated copyright date (2024)
 
 = 1.3.9 =
 Trivial update: noted compatibility through WP 6.3+, updated unit tests to run against latest WordPress, and updated copyright date (2023)
