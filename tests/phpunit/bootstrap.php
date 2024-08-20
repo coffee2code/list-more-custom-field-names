@@ -5,7 +5,10 @@
  * @package List_More_Custom_Field_Names
  */
 
-$polyfill_path = dirname( __FILE__, 3 ) . '/vendor/yoast/phpunit-polyfills/phpunitpolyfills-autoload.php';
+define( 'LIST_MORE_CUSTOM_FIELD_NAMES_PLUGIN_DIR',  dirname( __FILE__, 3 ) );
+define( 'LIST_MORE_CUSTOM_FIELD_NAMES_PLUGIN_FILE', LIST_MORE_CUSTOM_FIELD_NAMES_PLUGIN_DIR . '/list-more-custom-field-names.php' );
+
+$polyfill_path = LIST_MORE_CUSTOM_FIELD_NAMES_PLUGIN_DIR . '/vendor/yoast/phpunit-polyfills/phpunitpolyfills-autoload.php';
 if ( file_exists( $polyfill_path ) ) {
 	require $polyfill_path;
 } else {
@@ -13,8 +16,6 @@ if ( file_exists( $polyfill_path ) ) {
 	echo "Run: composer require --dev yoast/phpunit-polyfills:\"^2.0\"\n";
 	exit;
 }
-
-define( 'LIST_MORE_CUSTOM_FIELD_NAMES_PLUGIN_FILE', dirname( __FILE__, 3 ) . '/list-more-custom-field-names.php' );
 
 ! defined( 'WP_RUN_CORE_TESTS' ) && define( 'WP_RUN_CORE_TESTS', false );
 
