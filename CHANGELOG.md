@@ -4,6 +4,7 @@
 * Change: Note compatibility through WP 6.6+
 * Change: Update copyright date (2024)
 * Change: Reduce number of 'Tags' from `readme.txt`
+* Change: Tweak formatting in `readme.txt` and `README.md`
 
 ## 1.3.9 _(2023-06-06)_
 * Change: Note compatibility through WP 6.3+
