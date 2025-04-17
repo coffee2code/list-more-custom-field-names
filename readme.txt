@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
 Tested up to: 6.8
-Stable tag: 1.4
+Stable tag: 1.4.1
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -72,6 +72,11 @@ Yes. The tests are not packaged in the release .zip file or included in plugins.
 
 == Changelog ==
 
+= 1.4.1 (2025-04-17) =
+* Change: Note compatibility through WP 6.8+
+* Change: Note compatibility through PHP 8.3+
+* Change: Update copyright date (2025)
+
 = 1.4 (2024-08-20) =
 * New: Add second argument to 'c2c_list_more_custom_field_names' for the preexisting limit
 * Change: Note compatibility through WP 6.6+
@@ -92,23 +97,13 @@ Yes. The tests are not packaged in the release .zip file or included in plugins.
     * New: Add `composer.json` for PHPUnit Polyfill dependency
     * Change: Prevent PHP warnings due to missing core-related generated files
 
-= 1.3.8 (2021-09-17) =
-* Change: Note compatibility through WP 5.8+
-* Change: Update usage instructions to use anonymous function instead of `create_function()` (as was done in filter example in v1.3.3)
-* Change: Tweak indentation for code examples in readme.txt
-* Unit tests:
-    * Change: Restructure unit test directories
-        * Change: Move `phpunit/` into `tests/`
-        * Change: Move `phpunit/bin` into `tests/`
-    * Change: Remove 'test-' prefix from unit test file
-    * Change: In bootstrap, store path to plugin file constant
-    * Change: In bootstrap, add backcompat for PHPUnit pre-v6.0
-    * New: Add test for a negative value returned from filter
-
 _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/list-more-custom-field-names/blob/master/CHANGELOG.md)._
 
 
 == Upgrade Notice ==
+
+= 1.4.1 =
+Trivial update: noted compatibility through WP 6.8+ and PHP 8.3+, and updated copyright date (2025)
 
 = 1.4 =
 Minor update: added second argument to 'c2c_list_more_custom_field_names' filter, noted compatibility through WP 6.6+, removed unit tests from release packaging, and updated copyright date (2024)
