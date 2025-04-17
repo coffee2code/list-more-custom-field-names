@@ -1,5 +1,8 @@
 # Changelog
 
+## _(in-progress)_
+* Change: Update copyright date (2025)
+
 ## 1.4 _(2024-08-20)_
 * New: Add second argument to 'c2c_list_more_custom_field_names' for the preexisting limit
 * Change: Note compatibility through WP 6.6+
