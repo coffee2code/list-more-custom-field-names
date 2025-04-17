@@ -65,7 +65,7 @@ There are two ways you can customize this value (in both examples, change 100 to
 
 This plugin has no effect for users who make use of the block editor (aka Gutenberg) introduced in WordPress v5.0 because that editor does not directly expose custom fields in the interface. The plugin is still beneficial for users making use of the classic editor.
 
-= Does this plugin include unit tests? =
+= Does this plugin have unit tests? =
 
 Yes. The tests are not packaged in the release .zip file or included in plugins.svn.wordpress.org, but can be found in the [plugin's GitHub repository](https://github.com/coffee2code/list-more-custom-field-names/).
 
