@@ -4,6 +4,7 @@
 * Change: Note compatibility through WP 7.0+
 * Change: Note compatibility through PHP 8.5+
 * Change: Update copyright date (2026)
+* Change: Update dev dependencies
 * New: Add `.gitattributes` file to exclude files from Github packaging
 * Unit tests:
 *    * Change: Remove backward compatibility for PHPUnit < 6
