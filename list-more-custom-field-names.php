@@ -51,6 +51,8 @@ if ( ! function_exists( 'c2c_list_more_custom_field_names' ) ):
 	 * @return int The new number of custom field names to list.
 	 */
 	function c2c_list_more_custom_field_names( $limit ) {
+		$default_limit = 200;
+
 		if ( defined( 'CUSTOM_FIELD_NAMES_LIMIT' ) && CUSTOM_FIELD_NAMES_LIMIT ) {
 			$limit = CUSTOM_FIELD_NAMES_LIMIT;
 		} else {
@@ -64,10 +66,10 @@ if ( ! function_exists( 'c2c_list_more_custom_field_names' ) ):
 			 * @param int $number The number of custom fields.
 			 * @param int $limit  The default number of custom field names to list, which is likely 30 unless changed by another plugin.
 			 */
-			$limit = apply_filters( 'c2c_list_more_custom_field_names', 200, $limit );
+			$limit = (int) apply_filters( 'c2c_list_more_custom_field_names', $default_limit, $limit );
 		}
 
-		return absint( $limit );
+		return max( $limit, 0 ) === 0 ? $default_limit : $limit;
 	}
 	add_filter( 'postmeta_form_limit', 'c2c_list_more_custom_field_names' );
 
