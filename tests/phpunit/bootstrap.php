@@ -6,7 +6,7 @@
  */
 
 // Prevent web access.
-( php_sapi_name() !== 'cli' ) && die();
+( php_sapi_name() !== 'cli' ) && exit;
 
 define( 'LIST_MORE_CUSTOM_FIELD_NAMES_PLUGIN_DIR',  dirname( __FILE__, 3 ) );
 define( 'LIST_MORE_CUSTOM_FIELD_NAMES_PLUGIN_FILE', LIST_MORE_CUSTOM_FIELD_NAMES_PLUGIN_DIR . '/list-more-custom-field-names.php' );

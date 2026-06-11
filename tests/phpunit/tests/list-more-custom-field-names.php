@@ -1,6 +1,6 @@
 <?php
 
-defined( 'ABSPATH' ) or die();
+defined( 'ABSPATH' ) or exit;
 
 class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 
