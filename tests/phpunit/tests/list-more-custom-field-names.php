@@ -16,8 +16,8 @@ class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 		return 99;
 	}
 
-	protected function get_postmeta_form_limit() {
-		return apply_filters( 'postmeta_form_limit', 30 );
+	protected function get_postmeta_form_limit( $limit = 30 ) {
+		return apply_filters( 'postmeta_form_limit', $limit );
 	}
 
 
@@ -34,6 +34,30 @@ class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 
 	public function test_default_filtering() {
 		$this->assertEquals( $this->default_limit, $this->get_postmeta_form_limit() );
+	}
+
+	public function test_uses_provided_limit_if_greater_than_default_limit() {
+		$this->assertEquals( 999, $this->get_postmeta_form_limit( 999 ) );
+	}
+
+	public function test_ignores_provided_limit_if_less_than_default_limit() {
+		$this->assertEquals( $this->default_limit, $this->get_postmeta_form_limit( 10 ) );
+	}
+
+	public function test_ignores_provided_limit_if_not_an_integer() {
+		$this->assertEquals( $this->default_limit, $this->get_postmeta_form_limit( '12 foo' ) );
+	}
+
+	public function test_ignores_provided_limit_if_negative() {
+		$this->assertEquals( $this->default_limit, $this->get_postmeta_form_limit( -47 ) );
+	}
+
+	public function test_ignores_provided_limit_if_zero() {
+		$this->assertEquals( $this->default_limit, $this->get_postmeta_form_limit( 0 ) );
+	}
+
+	public function test_ignores_provided_limit_if_float() {
+		$this->assertEquals( $this->default_limit, $this->get_postmeta_form_limit( 55.4 ) );
 	}
 
 	public function test_c2c_list_more_custom_field_names_filter() {
