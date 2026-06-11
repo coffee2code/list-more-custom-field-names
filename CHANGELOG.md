@@ -1,5 +1,8 @@
 # Changelog
 
+## _(in-progres)_
+* Change: Note compatibility through WP 7.0+
+
 ## 1.4.1 _(2025-04-17)_
 * Change: Note compatibility through WP 6.8+
 * Change: Note compatibility through PHP 8.3+
