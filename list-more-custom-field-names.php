@@ -66,7 +66,12 @@ if ( ! function_exists( 'c2c_list_more_custom_field_names' ) ):
 			 * @param int $number The number of custom fields.
 			 * @param int $limit  The default number of custom field names to list, which is likely 30 unless changed by another plugin.
 			 */
-			$limit = (int) apply_filters( 'c2c_list_more_custom_field_names', $default_limit, $limit );
+			$limit = apply_filters( 'c2c_list_more_custom_field_names', $default_limit, $limit );
+		}
+
+		// Use the default limit if the limit is not an integer.
+		if ( ! is_int( $limit ) ) {
+			$limit = $default_limit;
 		}
 
 		return max( $limit, 0 ) === 0 ? $default_limit : $limit;

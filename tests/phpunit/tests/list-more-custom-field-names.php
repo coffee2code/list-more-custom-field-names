@@ -42,12 +42,6 @@ class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 		$this->assertEquals( 99, $this->get_postmeta_form_limit() );
 	}
 
-	public function test_converts_to_int() {
-		add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return 55.4; } );
-
-		$this->assertEquals( 55, $this->get_postmeta_form_limit() );
-	}
-
 	public function test_uses_default_limit_if_configured_limit_is_negative() {
 		add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return -47; } );
 
@@ -56,6 +50,18 @@ class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 
 	public function test_users_default_limit_if_configured_limit_is_zero() {
 		add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return 0; } );
+
+		$this->assertEquals( $this->default_limit, $this->get_postmeta_form_limit() );
+	}
+
+	public function test_uses_default_limit_if_configured_limit_is_float() {
+		add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return 55.4; } );
+
+		$this->assertEquals( $this->default_limit, $this->get_postmeta_form_limit() );
+	}
+
+	public function test_uses_default_limit_if_configured_limit_is_not_an_integer() {
+		add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return '12 foo'; } );
 
 		$this->assertEquals( $this->default_limit, $this->get_postmeta_form_limit() );
 	}

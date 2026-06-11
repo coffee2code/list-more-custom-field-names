@@ -1,6 +1,7 @@
 # Changelog
 
 ## _(in-progres)_
+* Change: Use default limit if configured value is not an integer
 * Change: Use default limit if configured limit is negative rather than casting as positive
 * Change: Use `exit` instead of `die()` when bailing on direct file invocation
 * Change: Note compatibility through WP 7.0+
