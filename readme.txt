@@ -70,9 +70,9 @@ This plugin only affects how many custom field keys WordPress includes in the dr
 
 = Is it possible to include all available custom field keys? =
 
-Currently with this plugin this is only possible by explicitly configuring a high enough value such that it exceeds the number of available custom field keys.
+Currently with this plugin this is only possible by explicitly configuring a high enough value such that it exceeds the number of custom field keys in use.
 
-Programmatically, the plugin's filter could be hooked by code that determines the exact number of custom keys and then using that value.
+Programmatically, the plugin's filter could be hooked by code that determines the exact number of custom keys and then uses that value.
 
 = Can configuring a large enough number affect page loading performance when editing a post? =
 
