@@ -9,6 +9,7 @@
 * New: Add additional FAQ entries and improve some documentation
 * Change: Note compatibility through WP 7.0+
 * Change: Note compatibility through PHP 8.5+
+* Change: Add 'Requires at least' and 'Requires PHP' headers to main plugin file
 * Change: Update copyright date (2026)
 * Change: Fix minor documentation typos
 * Change: Update dev dependencies

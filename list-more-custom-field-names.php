@@ -6,6 +6,8 @@
  * Author:      Scott Reilly
  * Author URI:  https://coffee2code.com/
  * Text Domain: list-more-custom-field-names
+ * Requires at least: 2.6
+ * Requires PHP:      5.5
  * License:     GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Description: Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
