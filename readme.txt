@@ -6,7 +6,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 2.6
 Tested up to: 7.0
-Stable tag: 1.4.1
+Stable tag: 1.5
 
 Allows for more existing custom field names to be listed in the dropdown selection field when writing a post.
 
@@ -93,6 +93,26 @@ Yes. The tests are not packaged in the release .zip file or included in plugins.
 
 == Changelog ==
 
+= 1.5 (2026-06-12) =
+Highlights:
+
+This release enforces a minimum configured limit of 30, honors a higher limit defined externally, permits stringy integer values, falls back to default limit if configured limit is invalid (negative or non-integer), improves docs, and notes compatibility through WP 7.0+ and PHP 8.5+.
+
+Details:
+
+* New: Enforce a minimum limit (the WordPress default of 30)
+* Change: Prefer the higher limit if one gets passed in
+* Change: Use default limit if configured value is not an integer
+* Change: Use default limit if configured limit is negative rather than casting as positive
+* Change: Treat an integer string as an integer
+* Change: Use `exit` instead of `die()` when bailing on direct file invocation
+* New: Add additional FAQ entries and improve some documentation
+* Change: Note compatibility through WP 7.0+
+* Change: Note compatibility through PHP 8.5+
+* Change: Add 'Requires at least' and 'Requires PHP' headers to main plugin file
+* Change: Update copyright date (2026)
+* Change: Fix minor documentation typos
+
 = 1.4.1 (2025-04-17) =
 * Change: Note compatibility through WP 6.8+
 * Change: Note compatibility through PHP 8.3+
@@ -122,6 +142,9 @@ _Full changelog is available in [CHANGELOG.md](https://github.com/coffee2code/li
 
 
 == Upgrade Notice ==
+
+= 1.5 =
+Notable update: enforced minimum limit of 30, honored higher limit defined externally, permitted stringy integers, used default limit for invalidly configured limit (negative or non-integer), improved docs, noted compatibility through WP 7.0+ and PHP 8.5+, and updated copyright date (2026).
 
 = 1.4.1 =
 Trivial update: noted compatibility through WP 6.8+ and PHP 8.3+, and updated copyright date (2025)

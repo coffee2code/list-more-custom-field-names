@@ -1,6 +1,13 @@
 # Changelog
 
-## _(in-progress)_
+## 1.5 _(2026-06-12)_
+
+### Highlights:
+
+This release enforces a minimum configured limit of 30, honors a higher limit defined externally, permits stringy integer values, falls back to default limit if configured limit is invalid (negative or non-integer), improves docs, and notes compatibility through WP 7.0+ and PHP 8.5+,.
+
+### Details:
+
 * New: Enforce a minimum limit (the WordPress default of 30)
 * Change: Prefer the higher limit if one gets passed in
 * Change: Use default limit if configured value is not an integer
