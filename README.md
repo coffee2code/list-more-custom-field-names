@@ -9,7 +9,7 @@ This plugin is available in the WordPress Plugin Directory: https://wordpress.or
 
 1. Install via the built-in WordPress plugin installer. Or install the plugin code inside the plugins directory for your site (typically `/wp-content/plugins/`).
 2. Activate the plugin through the 'Plugins' admin menu in WordPress
-3. (Optional:) In wp-config.php, customize the number of custom fields you want shown. The default of 200 can be changed by adding a line like:
+3. (Optional) In wp-config.php, customize the number of custom fields you want shown. The default of 200 can be changed by adding a line like:
    `define( 'CUSTOM_FIELD_NAMES_LIMIT', 100 );`
 
 

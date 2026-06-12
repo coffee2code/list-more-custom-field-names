@@ -96,8 +96,8 @@ class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 		$this->assertEquals( 34, $this->get_postmeta_form_limit() );
 	}
 
-	// Test this last since the constant can't be unset
-	public function test_constant_takes_precendence() {
+	// Test this last since the constant can't be unset.
+	public function test_constant_takes_precedence() {
 		$limit = 175;
 		define( 'CUSTOM_FIELD_NAMES_LIMIT', $limit );
 		add_filter( 'c2c_list_more_custom_field_names', array( $this, 'filter_c2c_list_more_custom_field_names' ) );
