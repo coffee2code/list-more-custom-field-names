@@ -4,6 +4,7 @@
 * Change: Prefer the higher limit if one gets passed in
 * Change: Use default limit if configured value is not an integer
 * Change: Use default limit if configured limit is negative rather than casting as positive
+* Change: Treat an integer string as an integer
 * Change: Use `exit` instead of `die()` when bailing on direct file invocation
 * Change: Note compatibility through WP 7.0+
 * Change: Note compatibility through PHP 8.5+

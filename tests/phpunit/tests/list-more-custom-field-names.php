@@ -66,6 +66,11 @@ class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 		$this->assertEquals( 99, $this->get_postmeta_form_limit() );
 	}
 
+	public function test_uses_filter_if_filtered_limit_is_greater_than_default_limit_and_is_int_string() {
+		add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return '499'; } );
+		$this->assertEquals( 499, $this->get_postmeta_form_limit() );
+	}
+
 	public function test_uses_default_limit_if_configured_limit_is_negative() {
 		add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return -47; } );
 

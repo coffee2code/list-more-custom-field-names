@@ -74,8 +74,9 @@ if ( ! function_exists( 'c2c_list_more_custom_field_names' ) ):
 			$limit = apply_filters( 'c2c_list_more_custom_field_names', $default_limit, $limit );
 		}
 
-		// Use the default limit if the limit is not an integer.
-		if ( ! is_int( $limit ) ) {
+		// Use the default limit if the limit does not look like an integer.
+		$limit = filter_var( $limit, FILTER_VALIDATE_INT );
+		if ( false === $limit ) {
 			$limit = $default_limit;
 		}
 
