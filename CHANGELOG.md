@@ -1,6 +1,7 @@
 # Changelog
 
 ## _(in-progress)_
+* New: Enforce a minimum limit (the WordPress default of 30)
 * Change: Prefer the higher limit if one gets passed in
 * Change: Use default limit if configured value is not an integer
 * Change: Use default limit if configured limit is negative rather than casting as positive

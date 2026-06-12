@@ -5,6 +5,7 @@ defined( 'ABSPATH' ) || exit;
 class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 
 	protected $default_limit = 200;
+	protected $minimum_limit = 30;
 
 	//
 	//
@@ -109,6 +110,24 @@ class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 		$this->assertEquals( $this->default_limit, $this->get_postmeta_form_limit() );
 	}
 
+	public function test_clamps_configured_limit_to_minimum_limit() {
+		add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return 10; } );
+
+		$this->assertEquals( $this->minimum_limit, $this->get_postmeta_form_limit() );
+	}
+
+	public function test_clamps_configured_limit_at_minimum_limit_boundary() {
+		add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return 29; } );
+
+		$this->assertEquals( $this->minimum_limit, $this->get_postmeta_form_limit() );
+	}
+
+	public function test_does_not_clamp_configured_limit_at_minimum_limit() {
+		add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return 30; } );
+
+		$this->assertEquals( $this->minimum_limit, $this->get_postmeta_form_limit() );
+	}
+
 	public function test_c2c_list_more_custom_field_names_filter_second_argument() {
 		add_filter( 'c2c_list_more_custom_field_names', function ( $limit, $old_limit ) { return $old_limit + 4; }, 10, 2 );
 
@@ -186,5 +205,16 @@ class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 		$this->assertEquals( $limit, $this->get_postmeta_form_limit( 0 ) );
 		$this->assertEquals( $limit, $this->get_postmeta_form_limit( 55.4 ) );
 	}
+
+	/**
+	 * @runInSeparateProcess Due to usage of a constant.
+	 * @preserveGlobalState disabled
+	 */
+	public function test_constant_is_clamped_to_minimum_limit() {
+		define( 'CUSTOM_FIELD_NAMES_LIMIT', 10 );
+
+		$this->assertEquals( $this->minimum_limit, $this->get_postmeta_form_limit() );
+	}
+
 
 }

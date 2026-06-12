@@ -28,6 +28,7 @@ _-or-_
 Notes:
 * The constant, if defined and truthy, takes precedence over the filter.
 * If either the constant is defined or the filter is hooked but the value configured or returned is not an integer (or an integer string), then the plugin's default will be used.
+* The limit specified must be equal to or greater than the WordPress default of 30.
 
 Links: [Plugin Homepage](https://coffee2code.com/wp-plugins/list-more-custom-field-names/) | [Plugin Directory Page](https://wordpress.org/plugins/list-more-custom-field-names/) | [GitHub](https://github.com/coffee2code/list-more-custom-field-names/) | [Author Homepage](https://coffee2code.com)
 
@@ -48,7 +49,7 @@ WordPress only lists up to 30.
 
 = How many custom field names/keys does this plugin list in the admin when writing/editing pages and posts? =
 
-By default, this plugin lists up to 200. You can customize this value.
+By default, this plugin lists up to 200. You can customize this value to anything equal to or above the WordPress default of 30.
 
 = How can I customize the default number of custom field name/keys listed in the admin when writing/editing pages and posts? =
 

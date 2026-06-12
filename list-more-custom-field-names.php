@@ -54,6 +54,7 @@ if ( ! function_exists( 'c2c_list_more_custom_field_names' ) ):
 	 */
 	function c2c_list_more_custom_field_names( $limit ) {
 		$default_limit = 200;
+		$minimum_limit = 30; // Equal to the WordPress default.
 
 		// Use the provided limit if it is an integer and greater than the default limit.
 		$provided_limit = filter_var( $limit, FILTER_VALIDATE_INT );
@@ -81,7 +82,7 @@ if ( ! function_exists( 'c2c_list_more_custom_field_names' ) ):
 			$limit = $default_limit;
 		}
 
-		return max( $limit, 0 ) === 0 ? $default_limit : $limit;
+		return max( $limit, 0 ) === 0 ? $default_limit : max( $limit, $minimum_limit );
 	}
 	add_filter( 'postmeta_form_limit', 'c2c_list_more_custom_field_names' );
 
