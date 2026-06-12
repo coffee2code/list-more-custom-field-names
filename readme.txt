@@ -25,7 +25,9 @@ _-or-_
 2. Somewhere -- ideally in a mu-plugin or site-specific plugin, or less ideally your active theme's functions.php file -- hook the 'c2c_list_more_custom_field_names' filter and return the number you'd like to use:
 `add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return 100; } );`
 
-*Note:* This plugin has no effect for users who make use of the block editor (aka Gutenberg) introduced in WordPress v5.0 because that editor does not directly expose custom fields in the interface.
+Notes:
+* The constant, if defined and truthy, takes precedence over the filter.
+* If either the constant is defined or the filter is hooked but the value configured or returned is not an integer (or an integer string), then the plugin's default will be used.
 
 Links: [Plugin Homepage](https://coffee2code.com/wp-plugins/list-more-custom-field-names/) | [Plugin Directory Page](https://wordpress.org/plugins/list-more-custom-field-names/) | [GitHub](https://github.com/coffee2code/list-more-custom-field-names/) | [Author Homepage](https://coffee2code.com)
 
@@ -52,7 +54,7 @@ By default, this plugin lists up to 200. You can customize this value.
 
 There are two ways you can customize this value (in both examples, change 100 to the number you'd like to use):
 
-1. In your wp-config.php file (in the root directory of your blog), add the following line of code (making sure it is within the opening `<?php` and closing `?>` PHP tags):
+1. In your wp-config.php file (in the root directory of your site), add the following line of code (making sure it is after the opening `<?php` PHP tag (and before the closing `?>` PHP tag if one is present):
 
     `define( 'CUSTOM_FIELD_NAMES_LIMIT', 100 );`
 
@@ -61,9 +63,23 @@ There are two ways you can customize this value (in both examples, change 100 to
     `add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return 100; } );`
 
 
+= Does this affect which custom field keys are shown? =
+
+This plugin only affects how many custom field keys WordPress includes in the dropdown. WordPress will return the configured number of custom fields from the full alphabetized list of all custom field keys. WordPress excludes private custom field keys, which will continue to be hidden.
+
+= Is it possible to include all available custom field keys? =
+
+Currently with this plugin this is only possible by explicitly configuring a high enough value such that it exceeds the number of available custom field keys.
+
+Programmatically, the plugin's filter could be hooked by code that determines the exact number of custom keys and then using that value.
+
+= Can configuring a large enough number affect page loading performance when editing a post? =
+
+Yes, but it depends on the number you've configured and the actual number of custom field keys in use on the site. If you're showing just a few hundred, you should be fine. (Anything more and the dropdown might become unwieldy anyhow.) Simply lower the value if you feel the page load has been slowed (and verify that the change actually sped things back up).
+
 = Why don't I see form fields for adding/editing custom fields for a post, as mentioned by documentation for this plugin? =
 
-This plugin has no effect for users who make use of the block editor (aka Gutenberg) introduced in WordPress v5.0 because that editor does not directly expose custom fields in the interface. The plugin is still beneficial for users making use of the classic editor.
+The block editor does not expose the "Custom Fields" meta box by default, so it may not be shown. Plugins (such as Advanced Custom Fields) may also hide the meta box for custom fields. This plugin has no effect on the presence of the "Custom Fields" input fields or their functionality.
 
 = Is this plugin tested through PHP 8.5+? =
 

@@ -6,6 +6,7 @@
 * Change: Use default limit if configured limit is negative rather than casting as positive
 * Change: Treat an integer string as an integer
 * Change: Use `exit` instead of `die()` when bailing on direct file invocation
+* New: Add additional FAQ entries and improve some documentation
 * Change: Note compatibility through WP 7.0+
 * Change: Note compatibility through PHP 8.5+
 * Change: Update copyright date (2026)
