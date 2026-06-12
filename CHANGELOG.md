@@ -13,6 +13,7 @@
 * Change: Update dev dependencies
 * New: Add `.gitattributes` file to exclude files from Github packaging
 * Unit tests:
+    * New: Add unit tests for the use of the constant
     * Change: Remove backward compatibility for PHPUnit < 6
 
 ## 1.4.1 _(2025-04-17)_

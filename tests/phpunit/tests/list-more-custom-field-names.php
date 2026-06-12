@@ -115,13 +115,76 @@ class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 		$this->assertEquals( 34, $this->get_postmeta_form_limit() );
 	}
 
-	// Test this last since the constant can't be unset.
-	public function test_constant_takes_precedence() {
-		$limit = 175;
+	/**
+	 * @runInSeparateProcess Due to usage of a constant.
+	 * @preserveGlobalState disabled
+	 */
+	public function test_constant_takes_precedence_over_filter() {
+		$limit = 98;
 		define( 'CUSTOM_FIELD_NAMES_LIMIT', $limit );
 		add_filter( 'c2c_list_more_custom_field_names', array( $this, 'filter_c2c_list_more_custom_field_names' ) );
 
 		$this->assertEquals( $limit, $this->get_postmeta_form_limit() );
+	}
+
+	/**
+	 * @runInSeparateProcess Due to usage of a constant.
+	 * @preserveGlobalState disabled
+	 */
+	public function test_constant_accepts_stringy_integer() {
+		$limit = '175';
+		define( 'CUSTOM_FIELD_NAMES_LIMIT', $limit );
+
+		$this->assertEquals( 175, $this->get_postmeta_form_limit() );
+	}
+
+	/**
+	 * @runInSeparateProcess Due to usage of a constant.
+	 * @preserveGlobalState disabled
+	 */
+	public function test_constant_with_falsey_value_is_ignored_and_default_limit_is_used() {
+		define( 'CUSTOM_FIELD_NAMES_LIMIT', '' );
+
+		$this->assertEquals( $this->default_limit, $this->get_postmeta_form_limit() );
+	}
+
+	/**
+	 * @runInSeparateProcess Due to usage of a constant.
+	 * @preserveGlobalState disabled
+	 */
+	public function test_constant_with_falsey_value_is_ignored_and_filtered_limit_is_used() {
+		define( 'CUSTOM_FIELD_NAMES_LIMIT', '' );
+		add_filter( 'c2c_list_more_custom_field_names', array( $this, 'filter_c2c_list_more_custom_field_names' ) );
+
+		$this->assertEquals( 99, $this->get_postmeta_form_limit() );
+	}
+
+	/**
+	 * @runInSeparateProcess Due to usage of a constant.
+	 * @preserveGlobalState disabled
+	 */
+	public function test_constant_is_ignored_if_provided_limit_is_greater_than_default_limit() {
+		define( 'CUSTOM_FIELD_NAMES_LIMIT', 999 );
+
+		$this->assertEquals( 399, $this->get_postmeta_form_limit( 399 ) );
+	}
+
+	/**
+	 * @runInSeparateProcess Due to usage of a constant.
+	 * @preserveGlobalState disabled
+	 */
+	public function test_constant_is_used_if_provided_limit_is_invalid() {
+		$limit = 999;
+		define( 'CUSTOM_FIELD_NAMES_LIMIT', $limit );
+
+		$this->assertEquals( $limit, $this->get_postmeta_form_limit( 100 ) );
+		$this->assertEquals( $limit, $this->get_postmeta_form_limit( '100' ) );
+		$this->assertEquals( $limit, $this->get_postmeta_form_limit( '100.0' ) );
+		$this->assertEquals( $limit, $this->get_postmeta_form_limit( '100.9' ) );
+		$this->assertEquals( $limit, $this->get_postmeta_form_limit( '100 foo' ) );
+		$this->assertEquals( $limit, $this->get_postmeta_form_limit( -100 ) );
+		$this->assertEquals( $limit, $this->get_postmeta_form_limit( 0 ) );
+		$this->assertEquals( $limit, $this->get_postmeta_form_limit( 55.4 ) );
 	}
 
 }
