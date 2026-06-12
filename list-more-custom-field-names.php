@@ -54,11 +54,10 @@ if ( ! function_exists( 'c2c_list_more_custom_field_names' ) ):
 		$default_limit = 200;
 
 		// Use the provided limit if it is an integer and greater than the default limit.
-		if ( is_int( $limit ) && $limit > $default_limit ) {
-			return $limit;
-		}
-
-		if ( defined( 'CUSTOM_FIELD_NAMES_LIMIT' ) && CUSTOM_FIELD_NAMES_LIMIT ) {
+		$provided_limit = filter_var( $limit, FILTER_VALIDATE_INT );
+		if ( false !== $provided_limit && $provided_limit > $default_limit ) {
+			$limit = $provided_limit;
+		} elseif ( defined( 'CUSTOM_FIELD_NAMES_LIMIT' ) && CUSTOM_FIELD_NAMES_LIMIT ) {
 			$limit = CUSTOM_FIELD_NAMES_LIMIT;
 		} else {
 			/**

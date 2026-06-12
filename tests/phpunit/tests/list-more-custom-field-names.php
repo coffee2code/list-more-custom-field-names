@@ -5,6 +5,7 @@ defined( 'ABSPATH' ) || exit;
 class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 
 	protected $default_limit = 200;
+
 	//
 	//
 	// HELPER FUNCTIONS
@@ -38,6 +39,19 @@ class List_More_Custom_Field_Names_Test extends WP_UnitTestCase {
 
 	public function test_uses_provided_limit_if_greater_than_default_limit() {
 		$this->assertEquals( 999, $this->get_postmeta_form_limit( 999 ) );
+	}
+
+	public function test_uses_provided_limit_if_greater_than_default_limit_and_is_int_string() {
+		$this->assertEquals( 999, $this->get_postmeta_form_limit( '999' ) );
+	}
+
+	public function test_uses_filter_if_provided_limit_is_greater_than_filtered_limit_and_is_float_string() {
+		add_filter( 'c2c_list_more_custom_field_names', function ( $limit ) { return 499; } );
+		$this->assertEquals( 499, $this->get_postmeta_form_limit( '999.9' ) );
+	}
+
+	public function test_ignores_provided_limit_if_greater_than_default_limit_and_is_float_string() {
+		$this->assertEquals( $this->default_limit, $this->get_postmeta_form_limit( '999.9' ) );
 	}
 
 	public function test_ignores_provided_limit_if_less_than_default_limit() {
